@@ -23,9 +23,6 @@ export const createMusic = async (req, res) => {
 
         const result = await uploadFile(file.buffer.toString("base64"));
 
-        console.log("upload result: ", result)
-        console.log(req.file);
-
         const uri = result.url;
 
         if (!uri) {
@@ -33,7 +30,7 @@ export const createMusic = async (req, res) => {
         }
 
         const music = await musicModel.create({
-            url: result.url,
+            uri: result.url,
             title,
             artist: decoded.id,
         });
@@ -43,7 +40,7 @@ export const createMusic = async (req, res) => {
             music: {
                 id: music._id,
                 title: music.title,
-                uri: music.url,
+                uri: music.uri,
                 artist: music.artist,
             },
         });
