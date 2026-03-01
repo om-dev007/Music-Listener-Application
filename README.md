@@ -7,10 +7,10 @@ Right now, the backend is almost complete and the frontend is in progress.
 
 ## 📂 Project Structure
 
-sportify-clone/
-│
-├── backend/   → Node.js + Express API
-├── frontend/  → React application (in progress)
+sportify-clone/ <br>
+│ <br>
+├── backend/   → Node.js + Express API  <br>
+├── frontend/  → React application (in progress) 
 
 ## 🚧 Project Status
 
